@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: custom-light, custom-dark --prefersdark;
+}
+
+
+@layer base {
+  :root {
+    --font-sans: 'Figtree', sans-serif;
+    --font-display: 'Lexend', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: hsl(var(--b1));
+    color: hsl(var(--bc));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@plugin "daisyui/theme" {
+  name: "custom-light";
+  default: false;
+
+  /* Brand colors */
+  --color-primary: #2E2E2E;
+  --color-secondary: #6B7280;
+  --color-accent: #4A90E2;
+  --color-neutral: #374151;
+
+  /* Base colors */
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F4F4F4;
+  --color-base-300: #E5E7EB;
+  /* Added for consistency */
+  --color-base-content: #1F2937;
+
+  /* Text color on base backgrounds */
+  --glass-opacity: 25%;
+  /* Opacity of the background */
+  --glass-blur: 16px;
+  /* Blur radius of the backdrop */
+  --glass-border-opacity: 10%;
+
+
+  /* Semantic colors for light theme */
+  --color-info: #3B82F6;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Content colors for colored backgrounds */
+  --color-primary-content: #FFFFFF;
+  --color-secondary-content: #FFFFFF;
+  --color-accent-content: #FFFFFF;
+  --color-neutral-content: #FFFFFF;
+
+
+}
+
+@plugin "daisyui/theme" {
+  name: "custom-dark";
+  default: true;
+  --glass-opacity: 0.01;
+  --glass-text-shadow-opacity: 0.1;
+  /* Brand colors adjusted for dark mode */
+  --color-primary: #E0E0E0;
+  --color-secondary: #94A3B8;
+  --color-accent: #60A5FA;
+  --color-neutral: #D1D5DB;
+
+  /* Base colors */
+  --color-base-100: #0F172A;
+  --color-base-200: #1E293B;
+  --color-base-300: #334155;
+  /* Added for consistency */
+  --color-base-content: #F1F5F9;
+  /* Text color on base backgrounds */
+
+  /* Glassmorphism effects for Dark Theme */
+  --glass-opacity: 15%;
+  /* Slightly less opacity can look better in dark mode */
+  --glass-blur: 16px;
+  /* Consistent blur radius */
+  --glass-border-opacity: 10%;
+  /* Opacity of the border */
+  /* ---------------------------- */
+
+  /* Semantic colors optimized for dark theme */
+  --color-info: #38BDF8;
+  --color-success: #34D399;
+  --color-warning: #FBBF24;
+  --color-error: #F87171;
+
+  /* Content colors for colored backgrounds */
+  --color-primary-content: #0F172A;
+  --color-secondary-content: #0F172A;
+  --color-accent-content: #0F172A;
+  --color-neutral-content: #0F172A;
+
+}

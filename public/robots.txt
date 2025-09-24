@@ -1,0 +1,6 @@
+# Allow all web crawlers to access all content
+User-agent: *
+Disallow:
+
+# Provide the location of the sitemap for better indexing
+# Sitemap: https://your-portfolio-domain.com/sitemap.xml
