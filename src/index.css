@@ -34,6 +34,20 @@
   }
 }
 
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
 @plugin "daisyui/theme" {
   name: "custom-light";
   default: false;
@@ -81,7 +95,7 @@
   --glass-text-shadow-opacity: 0.1;
   /* Brand colors adjusted for dark mode */
   --color-primary: #E0E0E0;
-  --color-secondary: #94A3B8;
+  --color-secondary: #98A6BB;
   --color-accent: #60A5FA;
   --color-neutral: #D1D5DB;
 

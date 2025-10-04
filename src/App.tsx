@@ -12,20 +12,23 @@ const EducationSection = React.lazy(() => import("./pages/Education"));
 
 function App() {
   return (
-    <main className="relative top-0 p-0 m-0">
+    <div className="relative top-0 p-0 m-0">
+      <h1 className="sr-only">
+        Veera Chinna Perumal - Full-Stack Developer Portfolio
+      </h1>
       <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-accent/20 blur-[80px]"></div>
-      <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md">
-        <Navbar />
-      </header>
-      <Hero />
-      <Suspense fallback={<div>Loading sections...</div>}>
-        <ExperienceSection />
-        <ProjectSection />
-        <SkillSection />
-        <EducationSection />
-      </Suspense>
+      <Navbar />
+      <main>
+        <Hero />
+        <Suspense fallback={<div>Loading sections...</div>}>
+          <ExperienceSection />
+          <ProjectSection />
+          <SkillSection />
+          <EducationSection />
+        </Suspense>
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }
 

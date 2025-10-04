@@ -18,12 +18,12 @@ const Hero = () => {
 
         {/* Text */}
         <div className="max-w-2xl text-center lg:text-left space-y-6">
-          <h1 className="text-3xl md:text-5xl font-bold text-primary tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-primary tracking-tight">
             <span className="text-secondary font-medium block mb-2">
               Full-Stack Developer
             </span>
             Crafting Scalable, High-Performance Web Applications
-          </h1>
+          </h2>
 
           <p className="text-secondary text-lg">
             I specialize in building production-grade solutions with React,

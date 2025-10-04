@@ -16,12 +16,13 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className="drawer z-50 shadow shadow-accent">
-      {/* Attach the ref to the checkbox inset-shadow-xs inset-shadow-accent*/}
+    <header className="drawer z-50 shadow shadow-accent sticky top-0 bg-base-100/80 backdrop-blur-md">
+      {/* Attach the ref to the checkbox */}
       <input
         id="my-drawer-3"
         type="checkbox"
         className="drawer-toggle"
+        aria-label="drawer-toggle"
         ref={drawerToggleRef}
       />
       <div className="drawer-content flex flex-col">
@@ -35,14 +36,16 @@ const Header: React.FC = () => {
               Veera Chinna Perumal
             </a>
           </div>
-          <nav className="flex-none hidden lg:block">
+          <nav aria-label="Main navigation">
+            {/* Visually hidden heading for outline */}
+            <h2 className="sr-only">Main Navigation</h2>
+
             {/* Desktop Navigation */}
-            <ul className="menu menu-horizontal font-medium text-base-content/80 gap-x-2">
+            <ul className="menu menu-horizontal font-medium text-base-content/80 gap-x-2 hidden lg:flex">
               {navs.map((nav, i) => (
                 <li key={i}>
                   <a
                     href={nav.section}
-                    aria-label={nav.name}
                     className="hover:text-accent transition-all duration-300"
                   >
                     {nav.name}
@@ -52,20 +55,19 @@ const Header: React.FC = () => {
               <li>
                 <a
                   href="https://drive.google.com/file/d/1srE2vcu__K8BE5Wi6YdfIUi_wj7ZQ_4a/view?usp=sharing"
-                  aria-label="Veera Chinna Perumal Resume drive link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-all duration-300"
                 >
-                  Resume
+                  Resume<span className="sr-only">(opens in Google Drive)</span>
                 </a>
               </li>
             </ul>
           </nav>
 
           {/* Theme & Drawer Toggle */}
-          <div className="flex flex-row gap-2 ">
-            <label className="swap swap-rotate pl-2">
+          <div className="flex flex-row gap-2">
+            <label className="swap swap-rotate pl-2" aria-label="theme toggler">
               <input
                 type="checkbox"
                 className="theme-controller"
@@ -104,14 +106,20 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Drawer Content */}
-      <nav className="drawer-side font-medium text-md">
+      <nav
+        className="drawer-side font-medium text-md"
+        aria-label="Mobile navigation"
+      >
+        {/* Visually hidden heading for outline */}
+        <h2 className="sr-only">Mobile Navigation</h2>
+
         <label
           htmlFor="my-drawer-3"
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
         <ul className="menu bg-base-100 w-80 min-h-full p-4">
-          <div className="flex justify-end p-2">
+          <li className="flex justify-end p-2">
             <label
               htmlFor="my-drawer-3"
               aria-label="close sidebar"
@@ -119,7 +127,7 @@ const Header: React.FC = () => {
             >
               <IoCloseSharp className="h-6 w-6" />
             </label>
-          </div>
+          </li>
 
           {navs.map((nav, i) => (
             <li key={i}>
@@ -127,7 +135,7 @@ const Header: React.FC = () => {
                 href={nav.section}
                 aria-label={nav.name}
                 className="hover:text-accent transition-all duration-300"
-                onClick={closeDrawer} // Add the onClick handler here
+                onClick={closeDrawer}
               >
                 {nav.name}
               </a>
@@ -137,18 +145,17 @@ const Header: React.FC = () => {
           <li className="font-medium text-md transition-all duration-300 hover:text-accent">
             <a
               href="https://drive.google.com/file/d/1srE2vcu__K8BE5Wi6YdfIUi_wj7ZQ_4a/view?usp=sharing"
-              aria-label="Veera Chinna Perumal Resume drive link"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-accent transition-all duration-300"
-              onClick={closeDrawer} // Add the onClick handler here
+              onClick={closeDrawer}
             >
-              Resume
+              Resume<span className="sr-only">(opens in Google Drive)</span>
             </a>
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };
 
