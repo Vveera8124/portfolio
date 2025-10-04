@@ -54,7 +54,7 @@ const Header: React.FC = () => {
               ))}
               <li>
                 <a
-                  href="https://drive.google.com/file/d/1srE2vcu__K8BE5Wi6YdfIUi_wj7ZQ_4a/view?usp=sharing"
+                  href="https://drive.google.com/file/d/114B6Qp6BPFxzU0lo32ePFTC3renvljP3/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-all duration-300"
@@ -144,7 +144,7 @@ const Header: React.FC = () => {
 
           <li className="font-medium text-md transition-all duration-300 hover:text-accent">
             <a
-              href="https://drive.google.com/file/d/1srE2vcu__K8BE5Wi6YdfIUi_wj7ZQ_4a/view?usp=sharing"
+              href="https://drive.google.com/file/d/114B6Qp6BPFxzU0lo32ePFTC3renvljP3/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-accent transition-all duration-300"
